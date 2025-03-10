@@ -172,7 +172,7 @@ lcd.cursor();
 break;
 case 4:
 lcd.setCursor(17, 1);
-lcd.print(valOnCursor[4]);
+lcd.cursor();
 break;
 
 }
@@ -189,8 +189,8 @@ if(isSuccessful){
     page=0;
   }
 }else{
-if(positionCursor == 0){
-   lcd.setCursor(0, 0);
+
+  lcd.setCursor(0, 0);
   lcd.print("---Programa Ativo---");
   lcd.setCursor(0, 1);
   lcd.print("( )prog 1 ( )prog 2 ");
@@ -198,9 +198,6 @@ if(positionCursor == 0){
   lcd.print("( )prog 3 ( )prog 4 ");
   lcd.setCursor(0, 3);
   lcd.print("*(Seleciona) #(Sair)"); 
-  positionCursor = 1;
-}
-
 
 switch (selectedProgram) {
 case 1:
